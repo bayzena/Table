@@ -2,7 +2,12 @@ export interface IDevelop {
   id: number;
   name: string;
   job_title: string;
+  tags: string[];
+  date: any;
 }
+
+export type IDevelopAdd = Pick<IDevelop, "name" | "job_title">;
+
 export interface TInitialState {
   developers: {
     data: IDevelop[];
@@ -10,3 +15,7 @@ export interface TInitialState {
     error: "";
   };
 }
+export type TInputs = {
+  name: string;
+  job_title: string;
+};

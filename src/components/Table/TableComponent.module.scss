@@ -1,0 +1,36 @@
+@mixin displayValues($flexDirection, $gap) {
+  display: flex;
+  flex-direction: $flexDirection;
+  gap: $gap;
+}
+.container {
+  padding: 2rem 4rem;
+  @include displayValues(column, 1.5rem)
+}
+
+.number {
+  max-width: 20px;
+}
+
+.name {
+  max-width: 60px;
+}
+.job {
+  max-width: 80px;
+}
+
+.btn {
+  max-width: 80px;
+}
+
+.date {
+  max-width: 80px;
+}
+
+.modalBody {
+  @include displayValues(column, 2rem);
+}
+
+.inputSpace {
+  @include displayValues(column, 10px);
+}

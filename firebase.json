@@ -1,0 +1,6 @@
+{
+  "database": {
+    ".read": true,
+    ".write": true
+  }
+}

@@ -1,4 +1,4 @@
-import { TInitialState } from "../types";
+import { TInitialState } from "types";
 
 export const initialState: TInitialState = {
   developers: {

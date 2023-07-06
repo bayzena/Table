@@ -1,8 +1,10 @@
 import axios from "axios";
+
 import { api } from "./endpoint";
+import { IDevelopAdd } from "types";
 
-export const axiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_API,
-});
+export const getDevelopersData = () => axios.get(api);
 
-export const getDevelopersData = () => axiosInstance.get(api);
+export const addDeveloper = (newUser: IDevelopAdd) => axios.post(api, newUser);
+
+export const deleteDeveloper = (id: number) => axios.delete(`${api}/${id}`);
